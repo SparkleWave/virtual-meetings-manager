@@ -31,6 +31,7 @@
 }
 
 .menu__link_active {
+  text-decoration: underline;
   color: #FFD700;
 }
 

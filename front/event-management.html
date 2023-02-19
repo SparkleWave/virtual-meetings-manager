@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./styles/normalize.css">
+    <link rel = "stylesheet" href="./styles/style.css">
+    <link rel = "stylesheet" href="./styles/event-management-style-1.css">
     <title>Event Management</title>
   </head>
-  <body>
-    <header>
-      <h1>Event Management</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Create Event</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </nav>
-    </header>
+  <body class = "page">
+  <header class = "header">
+    <h1 class = "header__title">Virtual Event Planner</h1>
+    <nav class = "menu">
+      <a href="index.html" class = "menu__link">Home</a>
+      <a href="create-event.html" class = "menu__link">Create Event</a>
+      <a href="#" class = "menu__link  menu__link_active">Manage Events</a>
+      <a href="#" class = "menu__link">My Account</a>
+    </nav>
+  </header>
     <main>
       <h2>Upcoming Events</h2>
       <table>
@@ -30,7 +34,7 @@
             <td>Event 1</td>
             <td>2023-03-15</td>
             <td>13:00</td>
-            <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            <td><a href="event.html">Edit</a> | <a href="#">Delete</a></td>
           </tr>
           <tr>
             <td>Event 2</td>
@@ -41,8 +45,8 @@
         </tbody>
       </table>
     </main>
-    <footer>
-      <p>&copy; 2023 My Web Page</p>
-    </footer>
+  <footer class = "footer">
+    <p>&copy; 2023 Virtual Event Planner. All rights reserved.</p>
+  </footer>
   </body>
 </html>
