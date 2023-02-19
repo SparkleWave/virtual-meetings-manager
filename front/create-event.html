@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href="./styles/normalize.css">
+  <link rel = "stylesheet" href="./styles/create-event.css">
+  <title>Create new event</title>
+  </head>
+  <body>
+    <header>
+      <h1>Create New Event</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">My Events</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form>
+        <label for="event-name">Event Name:</label>
+        <input type="text" id="event-name" name="event-name"><br><br>
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event-date"><br><br>
+        <label for="event-time">Event Time:</label>
+        <input type="time" id="event-time" name="event-time"><br><br>
+        <label for="event-description">Event Description:</label><br>
+        <textarea id="event-description" name="event-description" rows="5" cols="50"></textarea><br><br>
+        <input type="submit" value="Create Event">
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Web Page</p>
+    </footer>
+  </body>
+</html>
