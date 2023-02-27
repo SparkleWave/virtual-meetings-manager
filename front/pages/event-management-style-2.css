@@ -13,4 +13,5 @@
 @import url(../blocks/event-card/__image/event-card__image.css);
 @import url(../blocks/event-card/__title/event-card__title.css);
 @import url(../blocks/event-card/__link/event-card__link.css);
+@import url(../blocks/event-card/__time/event-card__time.css);
 @import url(../blocks/footer/footer.css);

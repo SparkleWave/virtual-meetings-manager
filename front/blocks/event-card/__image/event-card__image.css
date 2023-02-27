@@ -1,7 +1,11 @@
 .event-card__image{
     width: 350px;
     height: 350px;
+    display: flex;
+    max-width: 350px;
+    max-height: 350px;
     background-size: contain;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
