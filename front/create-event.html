@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href="pages/create-event.css">
+  <title>Create new event</title>
+  </head>
+  <body class = "page">
+    <header class = "header">
+     <h1 class = "header__title">Virtual Event Planner</h1>
+      <nav class = "menu">
+       <a href="index.html" class = "menu__link">Home</a>
+        <a href="#" class = "menu__link  menu__link_status_active">Create Event</a>
+       <a href="event-management-alt.html" class = "menu__link">Manage Events</a>
+       <a href="" class = "menu__link">My Account</a>
+     </nav>
+    </header>
+    <main class = "event-creator">
+      <form class = "form-admin">
+        <label for="event-name" class = "form__label">Event Name:</label>
+        <input type="text" id="event-name" name="event-name" class = "form__item form__item_name">
+        <label for="event-date" class = "form__label">Event Date:</label>
+        <input type="date" id="event-date" name="event-date" class = "form__item form__item_date">
+        <label for="event-time" class = "form__label">Event Time:</label>
+        <input type="time" id="event-time" name="event-time" class = "form__item form__item_time">
+        <label for="event-description" class = "form__label">Event Description:</label>
+        <textarea id="event-description" name="event-description" rows="5" cols="50"
+                  class = "form__item form__item_description"></textarea>
+        <input type="submit" value="Create Event" class = "form__button">
+      </form>
+    </main>
+    <footer class = "footer">
+      <p>&copy; 2023 Virtual Event Planner. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

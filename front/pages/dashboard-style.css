@@ -1,0 +1,82 @@
+body {
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.attendee-event {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.attendee-event-item {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: calc(33.33% - 20px);
+}
+
+.attendee-event-item h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.attendee-event-item p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.attendee-event-item button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.attendee-event-item button:hover {
+  background-color: #23527c;
+}

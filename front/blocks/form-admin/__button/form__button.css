@@ -1,0 +1,13 @@
+.form__button {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color  0.5s ease;
+}
+
+.form__button:hover {
+    background-color: #0059a6;
+}
