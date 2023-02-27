@@ -1,0 +1,16 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/root/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__title/header__title.css);
+@import url(../blocks/header/__info-button/header__info-button.css);
+@import url(../blocks/menu/menu.css);
+@import url(../blocks/menu/__link/menu__link.css);
+@import url(../blocks/menu/__link/_status/menu__link_status_active.css);
+@import url(../blocks/event-manager/event-manager.css);
+@import url(../blocks/event-cards/event-cards.css);
+@import url(../blocks/event-card/event-card.css);
+@import url(../blocks/event-card/__date/event-card__date.css);
+@import url(../blocks/event-card/__image/event-card__image.css);
+@import url(../blocks/event-card/__title/event-card__title.css);
+@import url(../blocks/event-card/__link/event-card__link.css);
+@import url(../blocks/footer/footer.css);

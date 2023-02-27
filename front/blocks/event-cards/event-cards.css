@@ -1,0 +1,11 @@
+.event-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 30px 0;
+    gap: 80px 0;
+}

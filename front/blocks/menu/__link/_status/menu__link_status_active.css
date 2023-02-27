@@ -1,0 +1,4 @@
+.menu__link_status_active {
+    text-decoration: underline;
+    color: #FFD700;
+}

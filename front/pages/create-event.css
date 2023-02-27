@@ -1,0 +1,13 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/root/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__title/header__title.css);
+@import url(../blocks/menu/menu.css);
+@import url(../blocks/menu/__link/menu__link.css);
+@import url(../blocks/menu/__link/_status/menu__link_status_active.css);
+@import url(../blocks/event-creator/event-creator.css);
+@import url(../blocks/form-admin/form-admin.css);
+@import url(../blocks/form-admin/__button/form__button.css);
+@import url(../blocks/form-admin/__item/form__item.css);
+@import url(../blocks/form-admin/__label/form__label.css);
+@import url(../blocks/footer/footer.css);

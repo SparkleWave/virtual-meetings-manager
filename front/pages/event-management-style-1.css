@@ -1,0 +1,36 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/root/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__title/header__title.css);
+@import url(../blocks/header/__info-button/header__info-button.css);
+@import url(../blocks/menu/menu.css);
+@import url(../blocks/menu/__link/menu__link.css);
+@import url(../blocks/menu/__link/_status/menu__link_status_active.css);
+
+
+@import url(../blocks/footer/footer.css);
+
+main {
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: blue;
+  color: white;
+}
+

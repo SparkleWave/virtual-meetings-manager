@@ -1,0 +1,9 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 475px;
+    margin: 1rem auto;
+    min-width: 800px;
+    text-align: center;
+}
