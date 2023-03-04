@@ -20,11 +20,17 @@ public class MeetingRequest {
     @JsonProperty(value = "users")
     private List<Long> users;
 
+    @JsonProperty(value = "usersCount")
+    private List<Long> usersCount;
+
     @JsonProperty(value = "meetingName")
     private String meetingName;
 
     @JsonProperty(value = "meetingDescription")
     private String meetingDescription;
+
+    @JsonProperty(value = "meetingsOrgName")
+    private String meetingsOrgName;
 
     public Long getMeetingId() {
         return meetingId;
@@ -64,5 +70,21 @@ public class MeetingRequest {
 
     public void setMeetingDescription(String meetingDescription) {
         this.meetingDescription = meetingDescription;
+    }
+
+    public List<Long> getUsersCount() {
+        return usersCount;
+    }
+
+    public void setUsersCount(List<Long> usersCount) {
+        this.usersCount = usersCount;
+    }
+
+    public String getMeetingsOrg() {
+        return meetingsOrgName;
+    }
+
+    public void setMeetingsOrg(String meetingsOrgName) {
+        this.meetingsOrgName = meetingsOrgName;
     }
 }

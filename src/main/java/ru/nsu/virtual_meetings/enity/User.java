@@ -18,6 +18,7 @@ public class User {
         this.password = password;
     }
 
+
     @Id
     @Column(name = "userId")
     private long userId;
@@ -28,16 +29,16 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "roles", joinColumns = @JoinColumn(name = "userId"))
-    @Enumerated(EnumType.STRING)
-    //@ManyToMany(cascade=CascadeType.ALL)
-    private Set<Role> roles;
+//    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+//    @CollectionTable(name = "roles", joinColumns = @JoinColumn(name = "userId"))
+//    @Enumerated(EnumType.STRING)
+//    //@ManyToMany(cascade=CascadeType.ALL)
+//    private Set<Role> roles;
 
     @Column(name = "enable", nullable = false)
     private boolean isEnabled;
 
-    @ManyToMany (cascade=CascadeType.ALL)
+    @ManyToMany (cascade=CascadeType.MERGE)
     @JoinTable
     private List<Meeting> meetings = new ArrayList<>();
 
@@ -73,13 +74,13 @@ public class User {
         this.meetings = meetings;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
+//    public Set<Role> getRoles() {
+//        return roles;
+//    }
+//
+//    public void setRoles(Set<Role> roles) {
+//        this.roles = roles;
+//    }
 
     public boolean isEnabled() {
         return isEnabled;
