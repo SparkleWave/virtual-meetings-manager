@@ -6,6 +6,7 @@ import ru.nsu.virtual_meetings.enity.Meeting;
 import ru.nsu.virtual_meetings.enity.Role;
 import ru.nsu.virtual_meetings.enity.User;
 import ru.nsu.virtual_meetings.exceptions.AlreadyExistException;
+import ru.nsu.virtual_meetings.exceptions.NotFoundException;
 import ru.nsu.virtual_meetings.repository.UserRepository;
 
 import java.util.Collections;
@@ -24,7 +25,7 @@ public class UserService {
         if (userRepository.findUserByUserName(user.getUserName()) != null)
             throw new AlreadyExistException("User with this login already exist");
 
-        user.setRoles(Collections.singleton(Role.USER));
+//        user.setRoles(Collections.singleton(Role.USER));
         user.setEnabled(true);
         //user.setRoles(Collections.singleton(new Role(1L, "USER")));
         //user.setUserPassword(bCryptPasswordEncoder.encode(user.getUserPassword()));
@@ -35,9 +36,10 @@ public class UserService {
 //        return userRepository.findUserByUserId(userId);
 //    }
 
-    public List<Meeting> getUserMeetings(Long userId) {
+    public List<Meeting> getUserMeetings(Long userId) throws NotFoundException {
         User user = userRepository.findUserByUserId(userId);
-        System.out.println(user.getMeetings());
+        if (user == null)
+            throw new NotFoundException("User not found");
         return user.getMeetings();
     }
 
@@ -45,9 +47,9 @@ public class UserService {
 //        userRepository.deleteByUserId(userId);
 //    }
 
-    public void updateUser(User user, Long userId) throws AlreadyExistException {
-        if (userRepository.findUserByUserName(user.getUserName()) != null)
-            throw new AlreadyExistException("User with this login already exist");
+    public void updateUser(User user, Long userId) throws NotFoundException {
+        if (userRepository.findUserByUserName(user.getUserName()) == null)
+            throw new NotFoundException("User not found");
         user.setUserId(userId);
         userRepository.saveAndFlush(user);
     }

@@ -9,6 +9,7 @@ import ru.nsu.virtual_meetings.controller.requests.UserRequest;
 import ru.nsu.virtual_meetings.enity.Meeting;
 import ru.nsu.virtual_meetings.enity.User;
 import ru.nsu.virtual_meetings.exceptions.AlreadyExistException;
+import ru.nsu.virtual_meetings.exceptions.NotFoundException;
 import ru.nsu.virtual_meetings.service.UserService;
 
 import java.util.List;
@@ -34,12 +35,16 @@ public class UserController {
 //    }
 
     @GetMapping(value = "/users/get-meetings/{userId}")
-    public ResponseEntity<List<Meeting>> getUsersMeetings (@PathVariable(name = "userId") Long userId) {
-        return new ResponseEntity<>(userService.getUserMeetings(userId), HttpStatus.OK);
+    public ResponseEntity<List<Meeting>> getUsersMeetings (@PathVariable(name = "userId") Long userId) throws NotFoundException {
+        List<Meeting> meetings = userService.getUserMeetings(userId);
+        for (Meeting m : meetings) {
+            System.out.println(m.getMeetingId());
+        }
+        return new ResponseEntity<>(meetings, HttpStatus.OK);
     }
 
     @PutMapping(value = "/users/{userId}")
-    public ResponseEntity<Void> updateUser(@RequestBody UserRequest userRequest, @PathVariable(name = "userId") Long userId) throws AlreadyExistException {
+    public ResponseEntity<Void> updateUser(@RequestBody UserRequest userRequest, @PathVariable(name = "userId") Long userId) throws AlreadyExistException, NotFoundException {
         User user = new User(userRequest.getUserId(), userRequest.getUserLogin(), userRequest.getUserPassword());
         userService.updateUser(user, userId);
         return ResponseEntity.ok().build();
